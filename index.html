@@ -1,0 +1,47 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<!-- STYLE -->
+<style>
+  .container {
+    
+  }
+  
+  .highcharts-credits {
+    display:none;
+  }
+</style>
+
+<!-- SCRIPT -->
+<script>
+// Initialisation du graphique Highcharts
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Dates vendanges par années'
+    },
+    xAxis: {
+        categories: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+        title: {
+            text: 'Années'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Septembre'
+        },
+        categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+        tickInterval: 1
+    },
+    series: [{
+        name: 'Jours',
+        data: [3, 16, 15, 0, 0, 0, 0, 0 ] // Données fictives
+    }]
+});
+</script>
